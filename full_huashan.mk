@@ -28,6 +28,13 @@ $(call inherit-product, device/sony/huashan/huashan.mk)
 # Common Sony Resources
 $(call inherit-product, device/sony/common/common.mk)
 
+# Sony default overrides
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.semc.version.sw=1269-3538 \
+    ro.semc.version.sw_revision=12.1.A.1.205 \
+    ro.semc.version.sw_variant=GENERIC \
+    ro.semc.version.sw_type=user
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_huashan
 PRODUCT_DEVICE := huashan

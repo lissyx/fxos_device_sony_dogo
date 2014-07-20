@@ -1,5 +1,21 @@
+######################## Customized property values #########################
+ro.semc.version.cust=1272-3352
+ro.semc.version.cust_revision=R1B
+ro.somc.customerid=8242
+ro.semc.content.number=PA5
+
+################# Updating of the SW Version #################
+ro.semc.version.fs_revision=12.1.A.1.205
+
+##### Values from product package metadata #####
+ro.semc.product.model=C5303
+ro.semc.ms_type_id=PM-0350-BV
+ro.semc.version.fs=GLOBAL-LTE
+ro.semc.product.name=Xperia SP
+ro.semc.product.device=C53
+
 #
-# system.prop for Xperia SP
+# from device/somc/viskan/system.prop
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
