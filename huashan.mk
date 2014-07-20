@@ -127,10 +127,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.supplicant_scan_interval=15 \
     wlan.driver.ath=0
 
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1
