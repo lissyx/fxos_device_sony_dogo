@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom boot image
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/logo.rle:root/logo.rle \
     $(LOCAL_PATH)/rootdir/sbin/tad_static:root/sbin/tad_static \
     $(LOCAL_PATH)/rootdir/sbin/wait4tad_static:root/sbin/wait4tad_static \
     $(LOCAL_PATH)/custombootimg/bootrec-device:recovery/bootrec-device \

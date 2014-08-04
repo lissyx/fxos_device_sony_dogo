@@ -13,10 +13,6 @@
 # limitations under the License.
 #
 
-# Screen resoultion in Pixels.
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 QCOM_CHIPSET_FAMILY := msm8960
 
 # Inherit from generic device makefile
