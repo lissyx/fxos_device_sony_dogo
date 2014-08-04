@@ -19,14 +19,8 @@ TARGET_SCREEN_WIDTH := 720
 
 QCOM_CHIPSET_FAMILY := msm8960
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from huashan device makefile
+# Inherit from generic device makefile
 $(call inherit-product, device/sony/huashan/device.mk)
-
-# Common Sony Resources
-$(call inherit-product, device/sony/common/common.mk)
 
 # Sony default overrides
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -35,8 +29,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.semc.version.sw_variant=GENERIC \
     ro.semc.version.sw_type=user
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_huashan
+# Set these variables here to overwrite any inherited values.
 PRODUCT_DEVICE := huashan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony

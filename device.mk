@@ -14,13 +14,6 @@
 
 DEVICE_PACKAGE_OVERLAYS += device/sony/huashan/overlay
 
-# FxOS pixel density
-GAIA_DEV_PIXELS_PER_PX := 2.0
-
-# FxOS SDCards
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/volume.cfg:system/etc/volume.cfg
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
