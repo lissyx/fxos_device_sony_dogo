@@ -23,7 +23,7 @@ QCOM_CHIPSET_FAMILY := msm8960
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from huashan device makefile
-$(call inherit-product, device/sony/huashan/huashan.mk)
+$(call inherit-product, device/sony/huashan/device.mk)
 
 # Common Sony Resources
 $(call inherit-product, device/sony/common/common.mk)
