@@ -29,8 +29,3 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.semc.version.sw_variant=GENERIC \
     ro.semc.version.sw_type=user
 
-# Set these variables here to overwrite any inherited values.
-PRODUCT_DEVICE := huashan
-PRODUCT_BRAND := Sony
-PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia SP

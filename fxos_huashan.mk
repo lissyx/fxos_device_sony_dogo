@@ -31,3 +31,7 @@ $(call inherit-product, device/sony/common/fxos_common.mk)
 
 # Set ROM specific product name.
 PRODUCT_NAME := fxos_huashan
+PRODUCT_DEVICE := huashan
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony
+PRODUCT_MODEL := Xperia SP
