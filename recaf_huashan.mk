@@ -13,6 +13,8 @@
 # limitations under the License.
 #
 
+QCOM_CHIPSET_FAMILY := msm8960
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 

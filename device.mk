@@ -131,6 +131,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0
 
+# Sony default overrides
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.semc.version.sw=1269-3538 \
+    ro.semc.version.sw_revision=12.1.A.1.205 \
+    ro.semc.version.sw_variant=GENERIC \
+    ro.semc.version.sw_type=user
+
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
