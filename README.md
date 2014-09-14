@@ -1,2 +1,2 @@
-Sony Xperia SP
+Sony Xperia ZR
 ==============

@@ -16,24 +16,19 @@
 QCOM_CHIPSET_FAMILY := msm8960
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from huashan makefile
-$(call inherit-product, device/sony/huashan/huashan.mk)
+$(call inherit-product, device/sony/dogo/dogo.mk)
 
-# FxOS pixel density
-GAIA_DEV_PIXELS_PER_PX := 2.0
+DEVICE_PACKAGE_OVERLAYS += device/sony/dogo/overlay
 
-# FxOS SDCards
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/system/etc/volume.cfg:system/etc/volume.cfg
-
-# Common FxOS Sony Resources
-$(call inherit-product, device/sony/common/fxos_common.mk)
+# Common recaf Sony Resources
+$(call inherit-product, device/sony/common/recaf_common.mk)
 
 # Set ROM specific product name.
-PRODUCT_NAME := fxos_huashan
-PRODUCT_DEVICE := huashan
+PRODUCT_NAME := recaf_dogo
+PRODUCT_DEVICE := dogo
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia SP
+PRODUCT_MODEL := Xperia ZR

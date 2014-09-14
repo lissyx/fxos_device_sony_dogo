@@ -1,1 +1,1 @@
-add_lunch_combo recaf_huashan-userdebug
+add_lunch_combo recaf_dogo-userdebug

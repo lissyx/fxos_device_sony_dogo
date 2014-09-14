@@ -13,30 +13,30 @@
 # limitations under the License.
 
 # inherit from the proprietary version
--include vendor/sony/huashan/BoardConfigVendor.mk
+-include vendor/sony/dogo/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/dogo/include
 
 # Recovery Assert
-TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
+TARGET_OTA_ASSERT_DEVICE := C5502,C5503,C5506,dogo
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_BOARD_PLATFORM := msm8960
-BOARD_VENDOR_PLATFORM := viskan
+BOARD_VENDOR_PLATFORM := fusion3
 
 # Architecture
 TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_CPU_VARIANT := krait
 
 # Kernel properties
-TARGET_KERNEL_SOURCE := kernel/sony/msm8960t
-TARGET_KERNEL_CONFIG := viskan_huashan_defconfig
+TARGET_KERNEL_SOURCE := kernel/sony/apq8064
+TARGET_KERNEL_CONFIG := cm_fusion3_dogo_defconfig
 
 # Kernel information
 BOARD_KERNEL_BASE     := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 androidboot.baseband=msm msm_rtb.filter=0x3F ehci-hcd.park=3 vmalloc=400M
+BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 maxcpus=2
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000
 
 # Audio
@@ -47,18 +47,18 @@ TARGET_LS_USE_ALS_NODE := true
 
 # Bluetooth
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/huashan/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/dogo/bluetooth
 
 # Display
 TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
-BOARD_EGL_CFG := device/sony/huashan/rootdir/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/sony/dogo/rootdir/system/lib/egl/egl.cfg
 
 # Custom boot
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-BOARD_CUSTOM_BOOTIMG_MK := device/sony/huashan/custombootimg/custombootimg.mk
-TARGET_RECOVERY_FSTAB := device/sony/huashan/rootdir/fstab.qcom
+BOARD_CUSTOM_BOOTIMG_MK := device/sony/dogo/custombootimg/custombootimg.mk
+TARGET_RECOVERY_FSTAB := device/sony/dogo/rootdir/fstab.qcom
 RECOVERY_FSTAB_VERSION := 2
 
 # GPS
@@ -69,8 +69,8 @@ TARGET_NO_RPC := true
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 26
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1287651328
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5865716736
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
@@ -90,10 +90,11 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 # SELinux sepolicy
 BOARD_SEPOLICY_DIRS += \
-    device/sony/huashan/sepolicy
+    device/sony/dogo/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file_contexts \
+    property_contexts \
     te_macros \
     bluetooth_loader.te \
     bridge.te \
@@ -111,7 +112,6 @@ BOARD_SEPOLICY_UNION += \
     netmgrd.te \
     qmux.te \
     rild.te \
-    rmt.te \
     surfaceflinger.te \
     system.te \
     tee.te \

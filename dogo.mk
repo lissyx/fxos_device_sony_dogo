@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/rootdir/system/etc/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    $(LOCAL_PATH)/rootdir/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
 
 # Custom boot image
 PRODUCT_COPY_FILES += \
@@ -139,10 +139,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.semc.version.sw_type=user
 
 # call dalvik heap config
-$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # Include non-opensource parts/ proprietary files
-$(call inherit-product, vendor/sony/huashan/huashan-vendor.mk)
+$(call inherit-product, vendor/sony/dogo/dogo-vendor.mk)
 
 # Include own Adreno blobs
-$(call inherit-product, vendor/sony/huashan/huashan-adreno-blobs.mk)
+$(call inherit-product, vendor/sony/dogo/dogo-adreno-blobs.mk)
+

@@ -1,7 +1,6 @@
 # kickstart processes and scripts
 type kickstart, domain;
 type kickstart_exec, exec_type, file_type;
-type kickstart_device, dev_type;
 
 # kickstart_checker.sh talks to init over the property socket
 unix_socket_connect(kickstart, property, init)
@@ -12,8 +11,8 @@ init_daemon_domain(kickstart)
 # Spawn /system/bin/efsks and /system/bin/ks
 allow kickstart kickstart_exec:file { open execute_no_trans getattr };
 
-# Run dd on m9kefs[123] block devices; write to /data/qcks/
-# Run cat on firmware and m9kefs[123] data; write to /data/qcks/
+# Run dd on m9kefs[123] block devices; write to /cache/qcks/
+# Run cat on firmware and m9kefs[123] data; write to /cache/qcks/
 allow kickstart efs_block_device:blk_file rw_file_perms;
 allow kickstart kickstart_data_file:file create_file_perms;
 allow kickstart kickstart_data_file:dir rw_dir_perms;
@@ -38,12 +37,15 @@ allow kickstart block_device:dir { getattr write search };
 allow kickstart radio_prop:property_service set;
 
 allow kickstart shell_exec:file entrypoint;
-# ls on /data/qcks/
+# ls on /cache/qcks/
 allow kickstart self:capability dac_override;
 
 # Access to the modem bridge chardevs
 allow kickstart kickstart_device:chr_file rw_file_perms;
 
 # set wake locks
-allow kickstart sysfs:file { append };
+allow kickstart sysfs_wake_lock:file { append open };
 
+allow kickstart system_data_file:dir { write add_name };
+allow kickstart system_data_file:file { write open };
+allow kickstart device:sock_file write;
