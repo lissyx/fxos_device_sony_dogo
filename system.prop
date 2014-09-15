@@ -1,21 +1,21 @@
 ######################## Customized property values #########################
-ro.semc.version.cust=1272-3352
-ro.semc.version.cust_revision=R1B
-ro.somc.customerid=8242
-ro.semc.content.number=PA5
+ro.semc.version.cust=1274-1395
+ro.semc.version.cust_revision=R2C
+ro.somc.customerid=699
+ro.semc.content.number=PA2
 
 ################# Updating of the SW Version #################
-ro.semc.version.fs_revision=12.1.A.1.205
+ro.semc.version.fs_revision=10.4.B.0.569
 
 ##### Values from product package metadata #####
-ro.semc.product.model=C5303
-ro.semc.ms_type_id=PM-0350-BV
+ro.semc.product.model=C5503
+ro.semc.ms_type_id=PM-0330-BV
 ro.semc.version.fs=GLOBAL-LTE
-ro.semc.product.name=Xperia SP
-ro.semc.product.device=C53
+ro.semc.product.name=Xperia ZR
+ro.semc.product.device=C55
 
 #
-# from device/somc/viskan/system.prop
+# from device/qcom/msm8960/system.prop
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
@@ -43,7 +43,7 @@ debug.mdpcomp.logs=0
 #
 persist.cne.feature=1
 
-lpa.decode=true
+lpa.decode=false
 
 #
 # system props for the data modules
