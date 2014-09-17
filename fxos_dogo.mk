@@ -22,11 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 $(call inherit-product, device/sony/dogo/dogo.mk)
 
 # FxOS pixel density
-GAIA_DEV_PIXELS_PER_PX := 2.0
+GAIA_DEV_PIXELS_PER_PX := 1.5
 
 # FxOS SDCards
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/volume.cfg:system/etc/volume.cfg
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.ril.0.network_types=gsm,wcdma,lte
+#   ro.moz.nfc.enabled=true
 
 # Common FxOS Sony Resources
 $(call inherit-product, device/sony/common/fxos_common.mk)
