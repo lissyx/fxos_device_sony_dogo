@@ -305,6 +305,11 @@ etc/firmware/tzsuntory.mdt
 #
 # Sensors
 #
+lib/libsensors_akm8963.so
+lib/libMPU3050.so
+lib/libmpl.so
+lib/libmllite.so
+lib/libmlplatform.so
 lib/hw/sensors.default.so
 lib/libals.so
 
