@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/usr/keylayout/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/system/etc/kickstart_checker.sh:system/etc/kickstart_checker.sh
+    $(LOCAL_PATH)/rootdir/system/etc/kickstart_checker.sh:system/etc/kickstart_checker.sh
 
 # Media
 PRODUCT_COPY_FILES += \

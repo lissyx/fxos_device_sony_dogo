@@ -359,6 +359,8 @@ lib/sysmon/sysmon_xo_therm.so
 #
 # TA
 #
+bin/clearpad_fwloader
+bin/ta2bin
 bin/ta_param_loader
 bin/ta_qmi_service
 bin/taimport
